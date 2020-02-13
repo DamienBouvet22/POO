@@ -2,52 +2,50 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-// Here comes your code.
-$maurice = new \App\Animals\Fish('maurice');
-$jean = new \App\Animals\Fish('jean');
-$pierre = new \App\Animals\Fish('pierre');
-$paul = new \App\Animals\Fish('paul');
-$jacques = new \App\Animals\Fish('jacques');
+function createanimal($nb, $nameToCreate, $typeToCreate) {
+    $index = 1;
+    for ($i=0; $i < $nb; $i++) {
+        (new $typeToCreate($nameToCreate . ' ' . $index))
+            ->sayHello()
+            ->presentation();
+        $index++;
 
-$oscar = new \App\Animals\CatFish('oscar');
-$grosminet = new \App\Animals\CatFish('grosminet');
+//        $poisson = new \App\Animals\Fish('poisson');
+//        $poisson->sayHello()->presentation();
+//
+//        (new \App\Animals\Fish('hugedhie'))
+//            ->presentation()
+//            ->sayHello();
+    }
 
-$nemo = new \App\Animals\ClownFish('nemo');
+}
 
-$bubulle = new \App\Animals\BubbleFish('bubulle');
-$marin = new \App\Animals\BubbleFish('marin');
-$dory = new \App\Animals\BubbleFish('dory');
+createanimal( 5, 'poisson', \App\Animals\Fish::class);
+createanimal( 3, 'bubblefish', \App\Animals\BubbleFish::class);
 
-$strip = new \App\Animals\Zebra('strip');
+//$maurice = new \App\Animals\Fish('maurice');
 
-$tropico = new \App\Animals\Parrot('tropico');
-$parrot2 = new \App\Animals\Parrot('parrot2');
-$parrot3 = new \App\Animals\Parrot('parrot3');
-$parrot4 = new \App\Animals\Parrot('parrot4');
-$parrot5 = new \App\Animals\Parrot('parrot5');
-$parrot6 = new \App\Animals\Parrot('parrot6');
-$parrot7 = new \App\Animals\Parrot('parrot7');
-$parrot8 = new \App\Animals\Parrot('parrot8');
-$parrot9 = new \App\Animals\Parrot('parrot9');
-$parrot10 = new \App\Animals\Parrot('parrot10');
+//$oscar = new \App\Animals\CatFish('oscar');
 
-$christophe = new \App\Animals\Dove('christophe');
-$vasco = new \App\Animals\Dove('vasco');
+//$nemo = new \App\Animals\ClownFish('nemo');
+//
+//$bubulle = new \App\Animals\BubbleFish('bubulle');
 
-$moby = new \App\Animals\Whale('moby dick');
+//$strip = new \App\Animals\Zebra('strip');
+//
+//$tropico = new \App\Animals\Parrot('tropico');
 
-$babar = new \App\Animals\Elephant('babar');
-$celeste = new \App\Animals\Elephant('celeste');
-
-?>
-<br>
-<?php
-$animals = array($maurice, $jean, $pierre, $paul, $jacques, $oscar, $grosminet, $bubulle, $marin, $dory, $nemo, $babar, $celeste, $strip, $tropico, $parrot2, $parrot3, $parrot4, $parrot5, $parrot6, $parrot7, $parrot8, $parrot9, $parrot10, $christophe, $vasco);
+//$christophe = new \App\Animals\Dove('christophe');
+//
+//$moby = new \App\Animals\Whale('moby dick');
+//
+//$babar = new \App\Animals\Elephant('babar');
+//
+//$animals = array($maurice, $oscar, $bubulle, $nemo, $babar, $strip, $tropico, $christophe);
 //echo '<pre>';
 //print_r($animals);
 //echo '</pre>';
-for ($i=0; $i < COUNT($animals); $i++) {
-    echo $animals[$i]->presentation() . '<br>';
-}
-?>
+//for ($i=0; $i < count($animal); $i++) {
+//    echo $animal[$i]->presentation() . '<br>';
+//}
 
