@@ -4,28 +4,50 @@ require __DIR__ . '/vendor/autoload.php';
 
 // Here comes your code.
 $maurice = new \App\Animals\Fish('maurice');
-echo $maurice->presentation();
+$jean = new \App\Animals\Fish('jean');
+$pierre = new \App\Animals\Fish('pierre');
+$paul = new \App\Animals\Fish('paul');
+$jacques = new \App\Animals\Fish('jacques');
 
 $oscar = new \App\Animals\CatFish('oscar');
-echo $oscar->presentation();
+$grosminet = new \App\Animals\CatFish('grosminet');
 
 $nemo = new \App\Animals\ClownFish('nemo');
-echo $nemo->presentation();
 
 $bubulle = new \App\Animals\BubbleFish('bubulle');
-echo $bubulle->presentation();
+$marin = new \App\Animals\BubbleFish('marin');
+$dory = new \App\Animals\BubbleFish('dory');
 
 $strip = new \App\Animals\Zebra('strip');
-echo $strip->presentation();
 
 $tropico = new \App\Animals\Parrot('tropico');
-echo $tropico->presentation();
+$parrot2 = new \App\Animals\Parrot('parrot2');
+$parrot3 = new \App\Animals\Parrot('parrot3');
+$parrot4 = new \App\Animals\Parrot('parrot4');
+$parrot5 = new \App\Animals\Parrot('parrot5');
+$parrot6 = new \App\Animals\Parrot('parrot6');
+$parrot7 = new \App\Animals\Parrot('parrot7');
+$parrot8 = new \App\Animals\Parrot('parrot8');
+$parrot9 = new \App\Animals\Parrot('parrot9');
+$parrot10 = new \App\Animals\Parrot('parrot10');
 
 $christophe = new \App\Animals\Dove('christophe');
-echo $christophe->presentation();
+$vasco = new \App\Animals\Dove('vasco');
 
 $moby = new \App\Animals\Whale('moby dick');
-echo $moby->presentation();
 
-$babar = new \App\Animals\CatFish('babar');
-echo $babar->presentation();
+$babar = new \App\Animals\Elephant('babar');
+$celeste = new \App\Animals\Elephant('celeste');
+
+?>
+<br>
+<?php
+$animals = array($maurice, $jean, $pierre, $paul, $jacques, $oscar, $grosminet, $bubulle, $marin, $dory, $nemo, $babar, $celeste, $strip, $tropico, $parrot2, $parrot3, $parrot4, $parrot5, $parrot6, $parrot7, $parrot8, $parrot9, $parrot10, $christophe, $vasco);
+//echo '<pre>';
+//print_r($animals);
+//echo '</pre>';
+for ($i=0; $i < COUNT($animals); $i++) {
+    echo $animals[$i]->presentation() . '<br>';
+}
+?>
+
