@@ -1,4 +1,4 @@
-#M emo - Programmation orientée objet en PHP
+# Memo - Programmation orientée objet en PHP
 
 ### Classe
 C'est un ensemble de variables et de fonctions (attributs et méthodes).
