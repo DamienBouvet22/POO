@@ -32,7 +32,7 @@ abstract class Animal
 //        return $this->getNoise();
 //    }
     public function presentation() {
-        echo 'Je m\'appelle ' . $this->name . ', je suis un(e) ' . static :: TYPE . ' et je fais ' . $this->getNoise() . '<br><br>';
+        echo 'Je m\'appelle ' . $this->name . ', je suis un ' . static :: TYPE . ' et je fais ' . $this->getNoise() . '<br><br>';
 
         return $this;
     }

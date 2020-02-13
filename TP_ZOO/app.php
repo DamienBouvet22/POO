@@ -3,12 +3,12 @@
 require __DIR__ . '/vendor/autoload.php';
 
 function createanimal($nb, $nameToCreate, $typeToCreate) {
-    $index = 1;
-    for ($i=0; $i < $nb; $i++) {
-        (new $typeToCreate($nameToCreate . ' ' . $index))
+
+    for ($i=1; $i <= $nb; $i++) {
+        (new $typeToCreate($nameToCreate . ' ' . $i))
             ->sayHello()
             ->presentation();
-        $index++;
+
 
 //        $poisson = new \App\Animals\Fish('poisson');
 //        $poisson->sayHello()->presentation();
@@ -22,6 +22,13 @@ function createanimal($nb, $nameToCreate, $typeToCreate) {
 
 createanimal( 5, 'poisson', \App\Animals\Fish::class);
 createanimal( 3, 'bubblefish', \App\Animals\BubbleFish::class);
+createanimal( 2, 'catfish', \App\Animals\CatFish::class);
+createanimal( 1, 'clownfish', \App\Animals\ClownFish::class);
+createanimal( 2, 'elephant', \App\Animals\Elephant::class);
+createanimal( 1, 'zebre', \App\Animals\Zebra::class);
+createanimal( 10, 'parrot', \App\Animals\Parrot::class);
+createanimal( 2, 'dove', \App\Animals\Dove::class);
+
 
 //$maurice = new \App\Animals\Fish('maurice');
 
