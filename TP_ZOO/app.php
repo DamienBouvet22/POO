@@ -3,16 +3,29 @@
 require __DIR__ . '/vendor/autoload.php';
 
 function createanimal($nb, $nameToCreate, $typeToCreate) {
+    //  facon sans tableau et sans variable en passant 3 paramètres à la fonction :
 
+//    for ($i=1; $i <= $nb; $i++) {
+//        (new $typeToCreate($nameToCreate . ' ' . $i))
+//            ->sayHello()
+//            ->presentation();
+
+    // même facon de faire mais avec un tableau :
+
+    $animals = array();
     for ($i=1; $i <= $nb; $i++) {
-        (new $typeToCreate($nameToCreate . ' ' . $i))
+        $animals[$i] = new $typeToCreate($nameToCreate . ' ' . $i);
+        ($animals[$i])
             ->sayHello()
             ->presentation();
 
+    // facon sans tableau mais en passant par une variable plutot que d'utiliser les paramètres $name et $type da la fonction :
 
 //        $poisson = new \App\Animals\Fish('poisson');
 //        $poisson->sayHello()->presentation();
-//
+
+    // facon sans variable mais sans passer par les paramètres $name et $type de la fonction :
+
 //        (new \App\Animals\Fish('hugedhie'))
 //            ->presentation()
 //            ->sayHello();
