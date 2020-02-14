@@ -47,5 +47,10 @@ class Zoo
         return self::$fence;
     }
 
+    public static function addAnimal()
+    {
+
+    }
+
 
 }

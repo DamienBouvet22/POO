@@ -4,14 +4,33 @@
 namespace App;
 
 
+use App\Animals\Fish;
+use App\Interfaces\CanFly;
+use App\Interfaces\CanSwim;
+
 class Enclosure
 {
+    /**
+     * @var Animal[] $animals
+     */
     private $animals = array();
 
-    public function addAnimal($animal) {
-
+    /**
+     * @param Animal $animal
+     */
+    public function addAnimal(Animal $animal)
+    {
+        $this->animals[] = $animal;
     }
-    public function toString() : String {
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        foreach ($this->animals as $animal){
+
+        }
+        return $this->animals;
     }
 }

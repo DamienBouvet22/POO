@@ -10,6 +10,9 @@ use App\Interfaces\CanWalk;
 
 abstract class Animal implements CanSwim, CanFly, CanWalk
 {
+    /**
+     * @var String $name
+     */
     private $name;
     const TYPE = 'Animal non défini';
 
@@ -23,9 +26,9 @@ abstract class Animal implements CanSwim, CanFly, CanWalk
 
     /**
      * Animal constructor.
-     * @param $name
+     * @param String $name
      */
-    public function __construct($name)
+    public function __construct(String $name)
     {
         $this->name = $name;
     }
