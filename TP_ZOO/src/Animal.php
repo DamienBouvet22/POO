@@ -4,7 +4,11 @@
 namespace App;
 
 
-abstract class Animal
+use App\Interfaces\CanFly;
+use App\Interfaces\CanSwim;
+use App\Interfaces\CanWalk;
+
+abstract class Animal implements CanSwim, CanFly, CanWalk
 {
     private $name;
     const TYPE = 'Animal non défini';
