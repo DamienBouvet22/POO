@@ -1,7 +1,7 @@
 # MEMO POO
  [Principe de base de la POO](http://webforce3.altervista.org/wiki/index.php?title=Memo_POO)
 
-## Avanatages de la POO
+## Avantages de la POO
 - Réutilisation du code dans différents projets<br>
 - Conception plus claire et organisée. Chaque partie du code devient un objet avec un contexte, des propriétés et des actions spécifiques (« Tout est objet » et « 1 classe = 1 rôle »)<br>
 - La POO s'inspire du monde réel pour la description des objets (caractéristiques, fonctions, héritage), ce qui facilite l'apprentissage de la logique objet (Exemple des animaux, véhicules..etc)<br>
