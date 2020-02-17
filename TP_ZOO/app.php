@@ -10,7 +10,9 @@ $animals = [
     \App\Animals\Elephant::class => 2,
     \App\Animals\Zebra::class => 1,
     \App\Animals\Parrot::class => 10,
-    \App\Animals\Dove::class => 2
+    \App\Animals\Dove::class => 2,
+    \App\Animals\Whale::class => 1
+
 ];
 
 

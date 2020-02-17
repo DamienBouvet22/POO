@@ -66,16 +66,18 @@ class Zoo
             self::$aviary = new Enclosure();
         }
 
-        if ($animal instanceof CanSwim) {
-            self::$aquarium->addAnimal($animal);
+        if ($animal instanceof CanFly) {
+            self::$aviary->addAnimal($animal);
+            return;
         }
 
         if ($animal instanceof CanWalk) {
             self::$fence->addAnimal($animal);
+            return;
         }
 
-        if ($animal instanceof CanFly) {
-            self::$aviary->addAnimal($animal);
+        if ($animal instanceof CanSwim) {
+            self::$aquarium->addAnimal($animal);
         }
     }
 
