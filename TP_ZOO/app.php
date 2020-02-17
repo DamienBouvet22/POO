@@ -2,6 +2,22 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+$animals = [
+    \App\Animals\Fish::class => 5,
+    \App\Animals\Zebra::class => 1,
+];
+
+
+foreach ($animals as $key => $value) {
+
+    for ($i = 0; $i < $value; $i++) {
+        $object = new $key($key . ($i+1));
+        \App\Zoo::addAnimal($object);
+    }
+}
+$zoo = new \App\Zoo();
+$zoo->visitTheZoo();
+
 //function createanimal($nb, $nameToCreate, $typeToCreate) {
 //    //  facon sans tableau et sans variable en passant 3 paramètres à la fonction :
 //
