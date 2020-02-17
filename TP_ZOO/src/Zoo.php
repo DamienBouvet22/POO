@@ -82,8 +82,8 @@ class Zoo
     public static function visitTheZoo()
     {
         echo '<h1 style=" text-align: center">Bienvenue au ZOO </h1><br><br><h2>Aquarium</h2>';
-        echo self::getAquarium().'<br><br>';
-        echo '<h2>Cage</h2>';
+        echo self::getAquarium();
+        echo '<h2>Enclos</h2>';
         echo self::getFence();
         echo '<h2>Volière</h2>';
         echo self::getAviary();
