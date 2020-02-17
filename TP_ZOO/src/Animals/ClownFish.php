@@ -9,11 +9,13 @@ use App\Interfaces\CanSwim;
 
 class ClownFish extends Animal implements CanSwim
 {
-    private $noise = 'blou';
-    const TYPE = 'poisson clown';
 
+    /**
+     * @return String
+     */
     protected function getNoise(): String
     {
-        return $this->noise ;
+        return "bloublouHiHiHi";
     }
+
 }

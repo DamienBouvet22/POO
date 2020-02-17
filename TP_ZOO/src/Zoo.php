@@ -5,6 +5,7 @@ namespace App;
 
 use App\Interfaces\CanSwim;
 use App\Interfaces\CanWalk;
+use App\Interfaces\CanFly;
 
 class Zoo
 {
@@ -18,6 +19,11 @@ class Zoo
      * @var Enclosure|null $fence
      */
     private static $fence = null;
+
+    /**
+     * @var Enclosure|null $aviary
+     */
+    private static $aviary = null;
 
     /**
      * @return Enclosure|null
@@ -36,6 +42,14 @@ class Zoo
     }
 
     /**
+     * @return Enclosure|null
+     */
+    public static function getAviary()
+    {
+        return self::$aviary;
+    }
+
+    /**
      * @param Animal $animal
      */
     public static function addAnimal(Animal $animal) : void
@@ -48,6 +62,10 @@ class Zoo
             self::$fence = new Enclosure();
         }
 
+        if (self::getAviary() === null) {
+            self::$aviary = new Enclosure();
+        }
+
         if ($animal instanceof CanSwim) {
             self::$aquarium->addAnimal($animal);
         }
@@ -55,14 +73,20 @@ class Zoo
         if ($animal instanceof CanWalk) {
             self::$fence->addAnimal($animal);
         }
+
+        if ($animal instanceof CanFly) {
+            self::$aviary->addAnimal($animal);
+        }
     }
 
     public static function visitTheZoo()
     {
-        echo '<h1 style=" text-align: center">Bienvenue au ZOO </h1><br><br><h2>Aquarium</h2><br>';
+        echo '<h1 style=" text-align: center">Bienvenue au ZOO </h1><br><br><h2>Aquarium</h2>';
         echo self::getAquarium().'<br><br>';
-        echo '<h2>Cage</h2><br>';
+        echo '<h2>Cage</h2>';
         echo self::getFence();
+        echo '<h2>Volière</h2>';
+        echo self::getAviary();
     }
 
 }

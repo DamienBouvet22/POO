@@ -9,11 +9,13 @@ use App\Interfaces\CanFly;
 
 class Parrot extends Animal implements CanFly
 {
-    private $noise = 'coco';
-    const TYPE = 'perroquet';
 
+    /**
+     * @return String
+     */
     protected function getNoise(): String
     {
-        return $this->noise ;
+        return "Coco";
     }
+
 }

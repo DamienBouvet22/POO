@@ -9,11 +9,13 @@ use App\Interfaces\CanWalk;
 
 class Elephant extends Animal implements CanWalk
 {
-    private $noise = 'toooooout';
-    const TYPE = 'Élephant';
 
+    /**
+     * @return String
+     */
     protected function getNoise(): String
     {
-        return $this->noise ;
+        return "Tooooout";
     }
+
 }

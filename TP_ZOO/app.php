@@ -4,7 +4,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 $animals = [
     \App\Animals\Fish::class => 5,
+    \App\Animals\BubbleFish::class => 3,
+    \App\Animals\CatFish::class => 2,
+    \App\Animals\ClownFish::class => 1,
+    \App\Animals\Elephant::class => 2,
     \App\Animals\Zebra::class => 1,
+    \App\Animals\Parrot::class => 10,
+    \App\Animals\Dove::class => 2
 ];
 
 

@@ -9,11 +9,13 @@ use App\Interfaces\CanWalk;
 
 class Zebra extends Animal implements CanWalk
 {
-    private $noise = 'hiiii';
-    const TYPE = 'Zèbre';
 
+    /**
+     * @return String
+     */
     protected function getNoise(): String
     {
-        return $this->noise ;
+        return "hiiiii";
     }
+
 }

@@ -9,11 +9,13 @@ use App\Interfaces\CanSwim;
 
 class BubbleFish extends Animal implements CanSwim
 {
-    private $noise = 'bloubloubloubloubloubloublou';
-    const TYPE = 'poisson bulle';
 
+    /**
+     * @return String
+     */
     protected function getNoise(): String
     {
-        return $this->noise ;
+        return "bloubloubloubloubloubloublou";
     }
+
 }
