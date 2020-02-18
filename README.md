@@ -62,3 +62,8 @@ Les animaux vont partager quelques caractéristiques communes mais pas assez pou
 L'opérateur « -> » permet d'accéder à un élément de tel objet
 
 L'opérateur « :: » permet d'accéder à un élément de telle classe.
+
+### Interface
+Une interface est un contrat passé entre cette interface et les classes qui l'implémente.
+Les classes dépendentes de cette interface doivent impérativement se conformer à ce contrat et implémenter les méthodes déclarées dans l'interface par exemple.
+Une interface peut donc être implémentée par plusieurs classes.
